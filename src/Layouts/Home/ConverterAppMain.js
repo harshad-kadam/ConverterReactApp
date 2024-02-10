@@ -122,7 +122,7 @@ const ConverterAppMain = () => {
       setLoading(true);
       e.preventDefault();
       console.log('API_URL:', CONSTANTS.REACT_APP_API_URL);
-      let reqPayload = (leftPanePayloadType == 'json') ? jsonPayload : xmlPayload;
+      let reqPayload = (leftPanePayloadType === 'json') ? jsonPayload : xmlPayload;
       const response = await axios.post(`${CONSTANTS.REACT_APP_API_URL}` + converterUri, reqPayload, {
         // const response = await axios.post('https://apis-dev.globalpay.com/v1/boarding/propay', xmlPayload, {
         mode: 'no-cors',
@@ -136,17 +136,17 @@ const ConverterAppMain = () => {
 
       const data = response.data;
 
-      if (leftPanePayloadType == 'text') {
+      if (leftPanePayloadType === 'text') {
         setJsonPayload(data);
-      } else if (leftPanePayloadType == 'xml') {
+      } else if (leftPanePayloadType === 'xml') {
         //based on request content-type req xml type then res json type & vice versa
-        if (contentType == 'application/xml') {
+        if (contentType === 'application/xml') {
           setJsonPayload(JSON.stringify(data, null, 2));
         } else {
           setJsonPayload(data);
         }
-      } else if (leftPanePayloadType == 'json') {
-        if (contentType == 'application/xml') {
+      } else if (leftPanePayloadType === 'json') {
+        if (contentType === 'application/xml') {
           setXmlPayload(JSON.stringify(data, null, 2));
         } else {
           setXmlPayload(data);
@@ -216,7 +216,7 @@ const ConverterAppMain = () => {
   const handleXmlChange = (xml) => {
     setXmlPayload(xml);
   };
-  
+
   const handleJsonChange = (json) => {
     setJsonPayload(json);
   };
@@ -349,8 +349,8 @@ const ConverterAppMain = () => {
       const reader = new FileReader();
       reader.onload = (e) => {
         const fileContent = e.target.result;
-        if (paneTypeXorJ === "xml") (leftPanePayloadType == 'json') ? setJsonPayload(fileContent) : setXmlPayload(fileContent);
-        if (paneTypeXorJ === "json") (leftPanePayloadType == 'xml') ? setJsonPayload(fileContent) : setXmlPayload(fileContent);
+        if (paneTypeXorJ === "xml") (leftPanePayloadType === 'json') ? setJsonPayload(fileContent) : setXmlPayload(fileContent);
+        if (paneTypeXorJ === "json") (leftPanePayloadType === 'xml') ? setJsonPayload(fileContent) : setXmlPayload(fileContent);
         setDropdownOpen(false);
       };
 

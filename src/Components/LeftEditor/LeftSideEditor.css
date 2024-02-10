@@ -1,0 +1,18 @@
+/*===============< ACE Editor >==============*/
+.left-editor {
+  /* width: 100%;
+  height: 100%; */
+  background-color: #f2f2f2;
+  /* e8fffc */
+  /* border: 3px solid #1565c0;  */
+}
+
+/* .left-editor:hover {
+  border: 4px double #368df0; 
+  transition: border-color 0.3s ease; 
+} */
+
+#left-editor > div.ace_gutter {
+  background-color: #f2f2f2;
+  border-right: 1px solid black;
+}

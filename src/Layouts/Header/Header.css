@@ -1,0 +1,16 @@
+/* Header.css */
+header {
+    background-color: #282a36;
+    color: #f8f8f2;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    z-index: -1; /* Ensure header stays above other elements */
+    position: relative;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  

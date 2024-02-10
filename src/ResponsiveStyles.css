@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .Header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  .editors-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 80vh;
+    overflow-x: hidden;
+  }
+
+  .left-editor-pane,
+  .right-editor-pane {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+
+  .buttons-container {
+    display: none; 
+  }
+
+  .buttons-container-inner {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+    max-width: 100vw;
+  }
+
+  .Footer {
+    position: relative;
+    width: 100%;
+  }
+}

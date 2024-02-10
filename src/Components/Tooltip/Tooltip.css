@@ -1,0 +1,38 @@
+/*===============< Custom Tooltip Styles >===============*/
+.tooltip-inner {
+    background-color: #2196f3; /* Match with the button color */
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    max-width: 200px; /* Adjust the maximum width as needed */
+    text-align: center; /* Center the text within the tooltip */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .tooltip.show {
+    opacity: 1;
+    transition: opacity 0.2s ease, transform 0.2s ease; /* Add transition for transform */
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+    bottom: 125%; /* Adjust the distance from the triggering element */
+    left: 50%; /* Center the tooltip horizontally */
+  }
+  
+  .tooltip-arrow {
+    border-bottom-color: #333 !important; /* Adjust arrow color */
+  }
+  
+  .tooltip {
+    opacity: 0;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 125%; /* Adjust the distance from the triggering element */
+    left: 50%; /* Center the tooltip horizontally */
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+    transition: opacity 0.2s ease; /* Add transition for opacity */
+    will-change: transform;
+  }

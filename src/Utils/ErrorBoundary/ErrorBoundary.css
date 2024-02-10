@@ -1,0 +1,23 @@
+/* ErrorBoundary.css */
+
+.error-boundary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: #ff5252; /* Red color for error messages */
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .error-submessage {
+    color: #757575; /* Gray color for additional information */
+    font-size: 16px;
+  }
+  
+  
